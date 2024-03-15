@@ -1,4 +1,4 @@
-import '../css/Header.scss'
+import 'src/css/Header.scss'
 const Header = () => {
     return (
         <div className='top-header'>

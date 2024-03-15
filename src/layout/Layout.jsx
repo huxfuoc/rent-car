@@ -1,7 +1,7 @@
-import './Layout.scss';
-import Sidebar from '../components/Sidebar';
-import Header from '../components/Header';
-import { AppRouter } from '../routing/Router';
+import 'src/css/Layout.scss';
+import Sidebar from 'src/components/Sidebar';
+import Header from 'src/components/Header';
+import { AppRouter } from 'src/routing/Router';
 
 const Layout = () => {
 

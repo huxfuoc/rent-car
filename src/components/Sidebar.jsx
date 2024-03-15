@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-import '../css/Sidebar.scss'
-import { appRoutes } from '../routing/Routes'
+import 'src/css/Sidebar.scss'
+import { appRoutes } from 'src/routing/Routes'
 
 const SidebarLink = ({ to, children, imageSrc, altText }) => {
     const location = useLocation();

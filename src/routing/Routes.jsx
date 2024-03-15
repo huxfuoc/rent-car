@@ -1,9 +1,8 @@
-import react, { Component } from 'react'
-import Dashboard from '../pages/Dashboard'
-import Categories from '../pages/Categories'
-import Customer from '../pages/Customer'
-import CarManager from '../pages/CarManager'
-import OrderHistory from '../pages/OrderHistory'
+import Dashboard from 'src/pages/Dashboard'
+import Categories from 'src/pages/Categories'
+import Customer from 'src/pages/Customer'
+import CarManager from 'src/pages/CarManager'
+import OrderHistory from 'src/pages/OrderHistory'
 
 export const appRoutes = [
     {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import '../css/Dashboard.scss'
+import 'src/css/Dashboard.scss'
 // import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 // import { Doughnut } from 'react-chartjs-2';
 

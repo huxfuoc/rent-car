@@ -11,7 +11,6 @@ const SidebarLink = ({ to, children, imageSrc, altText }) => {
             </Link>
         </li>
     );
-
 };
 
 const Sidebar = () => {
@@ -21,19 +20,19 @@ const Sidebar = () => {
             <nav>
                 <ul>
                     <li>
-                        <SidebarLink to="/" imageSrc='src/assets/1.png' altText='dashboard'>Dashboard</SidebarLink>
+                        <SidebarLink to="/app" imageSrc='src/assets/1.png' altText='dashboard'>Dashboard</SidebarLink>
                     </li>
                     <li>
-                        <SidebarLink to="/customer" imageSrc='src/assets/2.png' altText='customer'>Customer</SidebarLink>
+                        <SidebarLink to="/app/customer" imageSrc='src/assets/2.png' altText='customer'>Customer</SidebarLink>
                     </li>
                     <li>
-                        <SidebarLink to="/categories" imageSrc='src/assets/3.png' altText='categories'>Categories</SidebarLink>
+                        <SidebarLink to="/app/categories" imageSrc='src/assets/3.png' altText='categories'>Categories</SidebarLink>
                     </li>
                     <li>
-                        <SidebarLink to="/manager" imageSrc='src/assets/4.png' altText='car'>Car manager</SidebarLink>
+                        <SidebarLink to="/app/manager" imageSrc='src/assets/4.png' altText='car'>Car manager</SidebarLink>
                     </li>
                     <li>
-                        <SidebarLink to="/history" imageSrc='src/assets/5.png' altText='history'>Orders history</SidebarLink>
+                        <SidebarLink to="/app/history" imageSrc='src/assets/5.png' altText='history'>Orders history</SidebarLink>
                     </li>
                 </ul>
             </nav>

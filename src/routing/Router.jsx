@@ -1,21 +1,42 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom';
-import Dashboard from '../pages/Dashboard';
-import Customer from '../pages/Customer';
-import Categories from '../pages/Categories';
-import CarManager from '../pages/CarManager';
-import OrderHistory from '../pages/OrderHistory';
+import React, { Children } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from '../pages/Login';
+import Layout from '../layout/Layout';
+import { appRoutes } from '../routing/Routes'
 
-const Router = () => {
+const getRoutes = (routes) => {
+    return (
+        <>
+            {routes.map((route, index) => (
+                <Route
+                    key={index}
+                    path={route.layout + route.path}
+                    element={<route.component />}
+                />
+            ))}
+        </>
+    );
+};
+
+const AppRouter = () => {
     return (
         <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/customer" element={<Customer />} />
-            <Route path="/categories" element={<Categories />} />
-            <Route path="/manager" element={<CarManager />} />
-            <Route path="/history" element={<OrderHistory />} />
+            {getRoutes(appRoutes)}
         </Routes>
-    )
-}
+    );
+};
 
-export default Router
+const MainRouter = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path='/' element={<Layout />} >
+                    {getRoutes(appRoutes)}
+                </Route>
+            </Routes>
+        </Router>
+    );
+};
+
+export { MainRouter, AppRouter };

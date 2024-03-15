@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import '../css/Sidebar.scss'
+import { appRoutes } from '../routing/Routes'
 
 const SidebarLink = ({ to, children, imageSrc, altText }) => {
     const location = useLocation();
@@ -11,7 +12,6 @@ const SidebarLink = ({ to, children, imageSrc, altText }) => {
             </Link>
         </li>
     );
-
 };
 
 const Sidebar = () => {
@@ -20,21 +20,16 @@ const Sidebar = () => {
             <div id='logo-icon'>TIIRA</div>
             <nav>
                 <ul>
-                    <li>
-                        <SidebarLink to="/" imageSrc='src/assets/1.png' altText='dashboard'>Dashboard</SidebarLink>
-                    </li>
-                    <li>
-                        <SidebarLink to="/customer" imageSrc='src/assets/2.png' altText='customer'>Customer</SidebarLink>
-                    </li>
-                    <li>
-                        <SidebarLink to="/categories" imageSrc='src/assets/3.png' altText='categories'>Categories</SidebarLink>
-                    </li>
-                    <li>
-                        <SidebarLink to="/manager" imageSrc='src/assets/4.png' altText='car'>Car manager</SidebarLink>
-                    </li>
-                    <li>
-                        <SidebarLink to="/history" imageSrc='src/assets/5.png' altText='history'>Orders history</SidebarLink>
-                    </li>
+                    {appRoutes.map((route, index) => (
+                        <SidebarLink
+                            key={index}
+                            to={route.layout + route.path}
+                            imageSrc={route.icon}
+                            altText={route.name}
+                        >
+                            {route.name}
+                        </SidebarLink>
+                    ))}
                 </ul>
             </nav>
         </div>

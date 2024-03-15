@@ -1,8 +1,8 @@
 import React, { Children } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from '../pages/Login';
-import Layout from '../layout/Layout';
-import { appRoutes } from '../routing/Routes'
+import Login from 'src/layout/Login';
+import Layout from 'src/layout/Layout';
+import { appRoutes } from 'src/routing/Routes'
 
 const getRoutes = (routes) => {
     return (

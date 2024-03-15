@@ -1,14 +1,13 @@
 import './Layout.scss';
 import Sidebar from '../components/Sidebar';
 import Header from '../components/Header';
-import AppRouter from '../routing/AppRouter';
+import { AppRouter } from '../routing/Router';
 
 const Layout = () => {
 
     return (
         <>
             <div className='dashboard'>
-
                 <div className='l'>
                     <Sidebar />
                 </div>

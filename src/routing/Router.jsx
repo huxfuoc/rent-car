@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from 'src/layout/Login';
 import Layout from 'src/layout/Layout';
 import { appRoutes } from 'src/routing/Routes'
+import ProtectedRoute from './ProtectedRoute';
 
 const getRoutes = (routes) => {
     return (
@@ -26,13 +27,18 @@ const AppRouter = () => {
     );
 };
 
+const token = localStorage.getItem('token');
+console.log('Kiểm tra token:', token);
+
 const MainRouter = () => {
     return (
         <Router>
             <Routes>
                 <Route path="/login" element={<Login />} />
-                <Route path='/' element={<Layout />} >
-                    {getRoutes(appRoutes)}
+                <Route element={<ProtectedRoute token={token} />}>
+                    <Route path='/' element={<Layout />} >
+                        {getRoutes(appRoutes)}
+                    </Route>
                 </Route>
             </Routes>
         </Router>

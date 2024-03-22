@@ -28,7 +28,6 @@ const AppRouter = () => {
 };
 
 const token = localStorage.getItem('token');
-console.log('Kiểm tra token:', token);
 
 const MainRouter = () => {
     return (

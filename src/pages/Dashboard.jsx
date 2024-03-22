@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import 'src/css/Dashboard.scss'
-// import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-// import { Doughnut } from 'react-chartjs-2';
+import { Chart } from "react-google-charts";
 
-// ChartJS.register(ArcElement, Tooltip, Legend);
 const Dashboard = () => {
 
 
@@ -44,12 +42,12 @@ const Dashboard = () => {
     }, [itoday, iyesterday]);
 
     useEffect(() => {
-        if (itoday < iyesterday) {
+        if (etoday < eyesterday) {
             setDiv2Content('↓');
         } else {
             setDiv2Content('↑');
         }
-    }, [itoday, iyesterday]);
+    }, [etoday, eyesterday]);
 
 
     useEffect(() => {
@@ -69,7 +67,7 @@ const Dashboard = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentDateTime(new Date());
-        }, 1000);
+        }, 100000);
 
         return () => {
             clearInterval(intervalId);
@@ -89,30 +87,22 @@ const Dashboard = () => {
 
     const formattedDateTime = new Intl.DateTimeFormat('en-US', options).format(currentDateTime);
 
-    // const data = {
-    //     labels: ['Total Hired', 'Total Canceled', 'Total Pending'],
-    //     datasets: [
-    //         {
-    //             data: [54, 20, 26],
-    //             backgroundColor: [
-    //                 '#006AFF',
-    //                 '#52C93F',
-    //                 '#FF2727',
-    //             ],
-    //             borderColor: [
-    //                 '#006AFF',
-    //                 '#52C93F',
-    //                 '#FF2727',
-    //             ],
-    //             borderWidth: 1,
-    //         },
-    //     ],
-    // }
-    // const CSSPie = {
-    //     cutout: '70%',
-    //     responsive: true,
-    //     maintainAspectRatio: false, // Giá trị phần trăm, tùy chỉnh để làm mỏng lại biểu đồ
-    // };
+    const chartData = [
+        ["Total", "Hire vs Cancel"],
+        ["Total Hired", 11],
+        ["Total Canceled", 2],
+        ["Total Pending", 2],
+    ];
+
+    const chartOption = {
+        pieHole: 0.7,
+        pieSliceText: "none",
+        legend: "none",
+        backgroundColor: 'transparent',
+        colors: ['#006AFF', '#FF2727', '#52C93F'],
+        top: "-35px",
+        enableInteractivity: "false"
+    }
 
     return (
         <div className='content'>
@@ -126,12 +116,12 @@ const Dashboard = () => {
                             <p id='p5'>Today</p>
                         </div>
                         <div className='income'>
-                            <h1 id='incomeToday'>$ { }1000.00</h1>
+                            <h1 id='incomeToday'>$1000.00</h1>
                             <p id='trend' style={{ color: trendColorI }}>{arrowChangeI}{trendPercentageI}%</p>
                         </div>
                         <div className='compare'>
-                            <p id='incomeYesterday'>Compare to  $5000{ } yesterday</p>
-                            <p id='incomeLastweek'>Last week ${ }12345.00</p>
+                            <p id='incomeYesterday'>Compare to  $2000 yesterday</p>
+                            <p id='incomeLastweek'>Last week $12345.00</p>
                         </div>
                     </div>
                     <div className='expences-wrap'>
@@ -144,17 +134,54 @@ const Dashboard = () => {
                             <p id='trend' style={{ color: trendColorE }}>{arrowChangeE}{trendPercentageE}%</p>
                         </div>
                         <div className='compare'>
-                            <p id='expencesYesterday'>Compare to  $5240{ } yesterday</p>
-                            <p id='expencesLastweek'>Last week ${ }12345.00</p>
+                            <p id='expencesYesterday'>Compare to  $5240 yesterday</p>
+                            <p id='expencesLastweek'>Last week $12345.00</p>
                         </div>
                     </div>
                     <div className='chart-wrap'>
                         <div className='wrap-header'>
                             <h3>Hire vs Cancel</h3>
                             <p id='p5'>Today</p>
-                            {/* <div className='donut-chart'>
-                                <Doughnut data={data} options={CSSPie} width={200} height={200} />
-                            </div> */}
+                        </div>
+                        <div className='wrap-chart'>
+                            <div className='donut-chart'>
+                                <Chart
+                                    chartType="PieChart"
+                                    width={'100%'}
+                                    height={'200px'}
+                                    data={chartData}
+                                    options={chartOption}
+                                />
+                            </div>
+                            <div className="chart-legend">
+                                <div className="item">
+                                    <div className='legend-title'>
+                                        <p className="dot blue"></p>
+                                        <p className="label">Total Hired</p>
+                                    </div>
+                                    <div className='legend-percent'>
+                                        <p className="value">54%↑</p>
+                                    </div>
+                                </div>
+                                <div className="item">
+                                    <div className='legend-title'>
+                                        <span className="dot green"></span>
+                                        <p className="label">Total Canceled</p>
+                                    </div>
+                                    <div className='legend-percent'>
+                                        <p className="value">20%↑</p>
+                                    </div>
+                                </div>
+                                <div className="item">
+                                    <div className='legend-title'>
+                                        <span className="dot red"></span>
+                                        <p className="label">Total Pending</p>
+                                    </div>
+                                    <div className='legend-percent'>
+                                        <p className="value">26%↓</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

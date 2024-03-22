@@ -11,11 +11,9 @@ const Login = () => {
         if (username === 'admin' && password === 'admin') {
             const token = 'token_check_yes';
             localStorage.setItem('token', token);
-
             navigate('/app');
-            console.log('Token:', token);
         } else {
-            alert('Tài khoản hoặc mật khẩu không đúng');
+            alert('Username or password is incorrect');
         }
     };
 

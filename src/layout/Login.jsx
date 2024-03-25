@@ -27,15 +27,15 @@ const Login = () => {
                 <span className='white-text'>T</span><span className='blue-text'>II</span><span className='white-text'>RA</span>
             </div>
             <div className='form-login'>
-                <h3>{t("header.Login")}</h3>
+                <h3>{t("login.login")}</h3>
                 <div className='form-input'>
-                    <label htmlFor='username'>{t("label.Username")}</label>
+                    <label htmlFor='username'>{t("login.username")}</label>
                     <input type='text' id='username' value={username} onChange={(e) => setUsername(e.target.value)}></input>
-                    <label htmlFor='password'>{t("label.Password")}</label>
+                    <label htmlFor='password'>{t("login.password")}</label>
                     <input type='password' id='password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
                 </div>
-                <button className='btn-forgot' onClick={handleForgotPassword}>{t("button.Forgot Password?")}</button>
-                <button className='btn-login' onClick={handleLogin}>{t("button.Login")}</button>
+                <button className='btn-forgot' onClick={handleForgotPassword}>{t("login.forgotPassword")}</button>
+                <button className='btn-login' onClick={handleLogin}>{t("login.login")}</button>
             </div>
         </div>
     );

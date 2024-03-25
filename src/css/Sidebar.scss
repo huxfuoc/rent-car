@@ -3,55 +3,55 @@
     flex-direction: column;
     width: 280px;
     height: 100%;
-}
 
-#logo-icon {
-    text-align: center;
-    font-size: 80px;
-    font-family: "Iceberg", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #2B4C59;
-    padding-top: 27px;
-}
+    #logo-icon {
+        text-align: center;
+        font-size: 80px;
+        font-family: "Iceberg", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: #2B4C59;
+        padding-top: 27px;
+    }
 
-nav {
-    color: #131313;
-}
+    nav {
+        color: #131313;
+    }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 
-li {
-    display: flex;
-    margin-bottom: 10px;
-}
+    li {
+        display: flex;
+        margin-bottom: 10px;
+    }
 
-a {
-    font-family: "Poppins", sans-serif;
-    text-decoration: none;
-    padding: 8px;
-    display: flex;
-    transition: transform 0.3s ease;
-    text-align: center;
-    align-items: center;
-    color: black;
-    filter: invert(60%) sepia(0%) saturate(18%) hue-rotate(295deg) brightness(97%) contrast(87%);
-}
+    a {
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+        padding: 8px;
+        display: flex;
+        transition: transform 0.3s ease;
+        text-align: center;
+        align-items: center;
+        color: black;
+        filter: invert(60%) sepia(0%) saturate(18%) hue-rotate(295deg) brightness(97%) contrast(87%);
+    }
 
-a img {
-    margin: 0px 20px;
-    width: 24px;
-    height: 24px;
-}
+    a img {
+        margin: 0px 20px;
+        width: 24px;
+        height: 24px;
+    }
 
-a:hover {
-    transform: translateX(5px);
-}
+    a:hover {
+        transform: translateX(5px);
+    }
 
-a.active {
-    filter: invert(22%) sepia(55%) saturate(5679%) hue-rotate(216deg) brightness(104%) contrast(94%);
-    border-left: 5px solid black;
+    a.active {
+        filter: invert(22%) sepia(55%) saturate(5679%) hue-rotate(216deg) brightness(104%) contrast(94%);
+        border-left: 5px solid black;
+    }
 }

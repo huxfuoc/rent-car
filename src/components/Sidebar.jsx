@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import 'src/css/Sidebar.scss'
 import { appRoutes } from 'src/routing/Routes'
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 const SidebarLink = ({ to, children, imageSrc, altText }) => {
     const location = useLocation();
@@ -19,6 +19,7 @@ const SidebarLink = ({ to, children, imageSrc, altText }) => {
 
 
 const Sidebar = () => {
+    const { t } = useTranslation("global")
     return (
         <div className="sidebar">
             <div id='logo-icon'>TIIRA</div>
@@ -31,7 +32,7 @@ const Sidebar = () => {
                             imageSrc={route.icon}
                             altText={route.name}
                         >
-                            {route.name}
+                            {t(`menu.${route.name}`)}
                         </SidebarLink>
                     ))}
                 </ul>

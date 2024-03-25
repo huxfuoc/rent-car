@@ -4,40 +4,39 @@ import Categories from 'src/pages/Categories';
 import Customer from 'src/pages/Customer';
 import CarManager from 'src/pages/CarManager';
 import OrderHistory from 'src/pages/OrderHistory';
-import i18n from 'src/locales/i18nConfig';
 
 
 export const appRoutes = [
     {
-        name: i18n.t("Main Dashboard"),
+        name: "mainDashboard",
         layout: "/app",
         path: "/",
         icon: "src/assets/1.png",
         component: Dashboard
     },
     {
-        name: i18n.t("Customer"),
+        name: "customer",
         layout: "/app",
         path: "/customer",
         icon: "src/assets/2.png",
         component: Customer
     },
     {
-        name: i18n.t("Categories"),
+        name: "categories",
         layout: "/app",
         path: "/categories",
         icon: "src/assets/3.png",
         component: Categories
     },
     {
-        name: i18n.t("Car Manager"),
+        name: "carManager",
         layout: "/app",
         path: "/manager",
         icon: "src/assets/4.png",
         component: CarManager
     },
     {
-        name: i18n.t("Orders history"),
+        name: "ordersHistory",
         layout: "/app",
         path: "/history",
         icon: "src/assets/5.png",

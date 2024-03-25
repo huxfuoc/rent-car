@@ -1,24 +1,31 @@
 {
+    "login": {
+        "username": "Tài khoản",
+        "password": "Mật khẩu",
+        "login": "Đăng nhập",
+        "forgotPassword": "Quên mật khẩu?"
+    },
     "header": {
-        "Login": "Đăng nhập"
+        "search": "Tìm kiếm"
     },
-    "label": {
-        "Username": "Tài khoản",
-        "Password": "Mật khẩu",
-        "Todays Statistics": "Thống kê hôm nay",
-        "Income": "Thu nhập",
-        "Expences": "Chi phí",
-        "Today": "Hôm nay",
-        "Compare to": "So sánh với",
-        "yesterday": "ngày hôm qua",
-        "Last week": "Tuần trước",
-        "Hire vs Cancel": "Số lượng thuê/ huỷ",
-        "Total Hired": "Người thuê",
-        "Total Canceled": "Huỷ đơn",
-        "Total Pending": "Đang chờ"
+    "menu": {
+        "mainDashboard": "Bảng điều khiển chính",
+        "customer": "Khách hàng",
+        "categories": "Danh mục",
+        "carManager": "Quản lý xe",
+        "ordersHistory": "Lịch sử đơn hàng"
     },
-    "button": {
-        "Forgot Password?": "Quên mật khẩu?",
-        "Login": "Đăng nhập"
+    "dashboard": {
+        "todaysStatistics": "Thống kê hôm nay",
+        "income": "Thu nhập",
+        "expenses": "Chi phí",
+        "today": "Hôm nay",
+        "compareTo": "So sánh với",
+        "yesterday": "Ngày hôm qua",
+        "lastWeek": "Tuần trước",
+        "hireVsCancel": "Số lượng thuê/ huỷ",
+        "totalHired": "Người thuê",
+        "totalCanceled": "Huỷ đơn",
+        "totalPending": "Đang chờ"
     }
 }

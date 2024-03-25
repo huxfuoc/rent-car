@@ -53,7 +53,8 @@
     gap: 5px;
 }
 
-input {
+#username,
+#password {
     display: flex;
     width: 370px;
     height: 44px;
@@ -81,7 +82,6 @@ input {
     border: none;
     color: #525252;
     cursor: pointer;
-    width: 150px;
     height: 50px;
     text-align: right;
     padding: 0;
@@ -93,7 +93,6 @@ input {
     height: 44px;
     padding: 10px 20px 10px 20px;
     border-radius: 5px;
-    gap: 10px;
     border: none;
     font-family: "Poppins", sans-serif;
     font-size: 16px;
@@ -104,4 +103,68 @@ input {
     background-color: #2B4C59;
     color: white;
     cursor: pointer;
+}
+
+#checkbox {
+    width: 10px;
+
+}
+
+.LanguageSelector {
+
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    /* Đảm bảo toggle button hiển thị trên các phần tử khác */
+
+}
+
+
+#toggle-checkbox {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 27px;
+    cursor: pointer;
+    background-color: rgb(215, 215, 215);
+    border-radius: 200px;
+}
+
+.slider:before {
+    content: url('');
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: none;
+    transition: .4s;
+    border: 1px solid black;
+}
+
+.slider:after {
+    content: url('/src/assets/vi-lang.png');
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: red;
+    transition: .4s;
+    border: 1px solid black;
+    box-shadow: 0px 4px 4px 0px rgb(83, 83, 83);
+}
+
+#toggle-checkbox:checked+.slider:before {
+    transform: translateX(26px);
+    background-color: blue;
+    content: "";
+}
+
+#toggle-checkbox:checked+.slider:after {
+    transform: translateX(26px);
+    background-color: red;
+    content: url('/src/assets/en-lang.png');
 }

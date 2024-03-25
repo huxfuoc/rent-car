@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react'
 import 'src/css/Dashboard.scss'
 import { Chart } from "react-google-charts";
 
+import { useTranslation } from 'react-i18next'
+
 const Dashboard = () => {
 
+    const { t } = useTranslation("global")
 
     const [itoday, setNumber1] = useState(0);
     const [iyesterday, setNumber2] = useState(0);
@@ -67,12 +70,13 @@ const Dashboard = () => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentDateTime(new Date());
-        }, 100000);
+        }, 1000);
 
         return () => {
             clearInterval(intervalId);
         };
     }, []);
+
 
     const options = {
         weekday: 'short',
@@ -107,40 +111,40 @@ const Dashboard = () => {
     return (
         <div className='content'>
             <div className='today-stats'>
-                <h2>Todays Statistics</h2>
+                <h2>{t("label.Todays Statistics")}</h2>
                 <p id='callendar'>{formattedDateTime}</p>
                 <div className='wrap-card-padding'>
                     <div className='income-wrap'>
                         <div className='wrap-header'>
-                            <h3>Income</h3>
-                            <p id='p5'>Today</p>
+                            <h3>{t("label.Income")}</h3>
+                            <p id='p5'>{t("label.Today")}</p>
                         </div>
                         <div className='income'>
                             <h1 id='incomeToday'>$1000.00</h1>
                             <p id='trend' style={{ color: trendColorI }}>{arrowChangeI}{trendPercentageI}%</p>
                         </div>
                         <div className='compare'>
-                            <p id='incomeYesterday'>Compare to  $2000 yesterday</p>
-                            <p id='incomeLastweek'>Last week $12345.00</p>
+                            <p id='incomeYesterday'>{t("label.Compare to")}  $2000 {t("label.yesterday")}</p>
+                            <p id='incomeLastweek'>{t("label.Last week")} $12345.00</p>
                         </div>
                     </div>
                     <div className='expences-wrap'>
                         <div className='wrap-header'>
-                            <h3>Expences</h3>
-                            <p id='p5'>Today</p>
+                            <h3>{t("label.Expences")}</h3>
+                            <p id='p5'>{t("label.Today")}</p>
                         </div>
                         <div className='income'>
                             <h1 id='expencesToday'>$ { }5660.00</h1>
                             <p id='trend' style={{ color: trendColorE }}>{arrowChangeE}{trendPercentageE}%</p>
                         </div>
                         <div className='compare'>
-                            <p id='expencesYesterday'>Compare to  $5240 yesterday</p>
-                            <p id='expencesLastweek'>Last week $12345.00</p>
+                            <p id='expencesYesterday'>{t("label.Compare to")}  $5240 {t("label.yesterday")}</p>
+                            <p id='expencesLastweek'>{t("label.Last week")} $10000.00</p>
                         </div>
                     </div>
                     <div className='chart-wrap'>
                         <div className='wrap-header'>
-                            <h3>Hire vs Cancel</h3>
+                            <h3>{t("label.Hire vs Cancel")}</h3>
                             <p id='p5'>Today</p>
                         </div>
                         <div className='wrap-chart'>
@@ -157,7 +161,7 @@ const Dashboard = () => {
                                 <div className="item">
                                     <div className='legend-title'>
                                         <p className="dot blue"></p>
-                                        <p className="label">Total Hired</p>
+                                        <p className="label">{t("label.Total Hired")}</p>
                                     </div>
                                     <div className='legend-percent'>
                                         <p className="value">54%↑</p>
@@ -166,7 +170,7 @@ const Dashboard = () => {
                                 <div className="item">
                                     <div className='legend-title'>
                                         <span className="dot green"></span>
-                                        <p className="label">Total Canceled</p>
+                                        <p className="label">{t("label.Total Canceled")}</p>
                                     </div>
                                     <div className='legend-percent'>
                                         <p className="value">20%↑</p>
@@ -175,7 +179,7 @@ const Dashboard = () => {
                                 <div className="item">
                                     <div className='legend-title'>
                                         <span className="dot red"></span>
-                                        <p className="label">Total Pending</p>
+                                        <p className="label">{t("label.Total Pending")}</p>
                                     </div>
                                     <div className='legend-percent'>
                                         <p className="value">26%↓</p>

@@ -1,0 +1,24 @@
+{
+    "header": {
+        "Login": "Login"
+    },
+    "label": {
+        "Username": "Username",
+        "Password": "Password",
+        "Todays Statistics": "Todays Statistics",
+        "Income": "Income",
+        "Expences": "Expences",
+        "Today": "Today",
+        "Compare to": "Compare to",
+        "yesterday": "yesterday",
+        "Last week": "Last week",
+        "Hire vs Cancel": "Hire vs Cancel",
+        "Total Hired": "Total Hired",
+        "Total Canceled": "Total Canceled",
+        "Total Pending": "Total Pending"
+    },
+    "button": {
+        "Forgot Password?": "Forgot Password?",
+        "Login": "Login"
+    }
+}

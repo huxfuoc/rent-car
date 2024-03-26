@@ -1,0 +1,89 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+$fontInter: 'Inter', sans-serif;
+$fontPoppins: 'Poppins', sans-serif;
+$fontLato : 'Lato',
+sans-serif;
+
+.categories {
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 52px;
+
+        .add-btn {
+            background-color: #2B4C59;
+            font-family: $fontInter;
+            font-weight: 700;
+            font-size: 19px;
+            width: 148px;
+            height: 52px;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .add-btn:hover {
+            background-color: #182930;
+        }
+
+        .header {
+            font-family: $fontPoppins;
+            font-weight: 500;
+            font-size: 24px;
+            margin: 0;
+        }
+    }
+}
+
+th,
+td {
+    border-left: none !important;
+    border-right: none !important;
+    text-align: center;
+    vertical-align: middle;
+    height: 70px;
+}
+
+td:first-child {
+    color: #0B63F8 !important;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+th {
+    font-family: $fontLato;
+    font-weight: 600;
+    font-size: 16px;
+    border-top: 1px solid white !important;
+}
+
+td {
+    font-family: $fontPoppins;
+    font-weight: 400;
+    font-weight: 16px;
+    color: #595959 !important;
+}
+
+.actions-column {
+    width: 20%;
+
+    .icon-save {
+        margin-bottom: 3px;
+        margin-right: 3px;
+    }
+
+    .edit-btn {
+        margin-right: 5px;
+    }
+
+    .delete-btn {
+        align-content: center;
+        align-items: center;
+    }
+}

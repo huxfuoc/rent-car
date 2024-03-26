@@ -1,0 +1,68 @@
+$fontPoppins: 'Poppins', sans-serif;
+
+.customer {
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 52px;
+        font-family: $fontPoppins;
+
+        .header {
+            font-family: $fontPoppins;
+            font-weight: 500;
+            font-size: 24px;
+            margin: 0;
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        .page-item {
+            padding: 0px 3px;
+            font-family: $fontPoppins;
+        }
+    }
+}
+
+.page-link {
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 12px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 18px;
+}
+
+
+.page-link:hover {
+    background-color: #3b4f56;
+    border-color: #3b4f56;
+    color: #fff;
+}
+
+.page-item.active .page-link {
+    background-color: #2B4C59;
+    border-color: #2B4C59;
+    color: #fff;
+}
+
+/* Kiểu cho mục đầu tiên (First) */
+.page-item:first-child .page-link {
+    background: none;
+    border: none;
+    color: black;
+}
+
+/* Kiểu cho mục cuối cùng (Last) */
+.page-item:last-child .page-link {
+    background: none;
+    border: none;
+    color: black;
+}

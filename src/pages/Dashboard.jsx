@@ -112,15 +112,15 @@ const Dashboard = () => {
         <div className='content'>
             <div className='today-stats'>
                 <h2>{t("dashboard.todaysStatistics")}</h2>
-                <p id='callendar'>{formattedDateTime}</p>
+                <p id='calendar'>{formattedDateTime}</p>
                 <div className='wrap-card-padding'>
                     <div className='income-wrap'>
                         <div className='wrap-header'>
-                            <h3>{t("dashboard.income")}</h3>
+                            <h3 className='header3'>{t("dashboard.income")}</h3>
                             <p id='p5'>{t("dashboard.today")}</p>
                         </div>
                         <div className='income'>
-                            <h1 id='incomeToday'>$1000.00</h1>
+                            <h1 id='incomeToday'>$ 1000.00</h1>
                             <p id='trend' style={{ color: trendColorI }}>{arrowChangeI}{trendPercentageI}%</p>
                         </div>
                         <div className='compare'>
@@ -128,9 +128,9 @@ const Dashboard = () => {
                             <p id='incomeLastweek'>{t("dashboard.lastWeek")} $12345.00</p>
                         </div>
                     </div>
-                    <div className='expences-wrap'>
+                    <div className='expenses-wrap'>
                         <div className='wrap-header'>
-                            <h3>{t("dashboard.expenses")}</h3>
+                            <h3 className='header3'>{t("dashboard.expenses")}</h3>
                             <p id='p5'>{t("dashboard.today")}</p>
                         </div>
                         <div className='income'>
@@ -144,7 +144,7 @@ const Dashboard = () => {
                     </div>
                     <div className='chart-wrap'>
                         <div className='wrap-header'>
-                            <h3>{t("dashboard.hireVsCancel")}</h3>
+                            <h3 className='header3'>{t("dashboard.hireVsCancel")}</h3>
                             <p id='p5'>Today</p>
                         </div>
                         <div className='wrap-chart'>

@@ -1,44 +1,45 @@
-import Dashboard from 'src/pages/Dashboard'
-import Categories from 'src/pages/Categories'
-import Customer from 'src/pages/Customer'
-import CarManager from 'src/pages/CarManager'
-import OrderHistory from 'src/pages/OrderHistory'
+// routes.js
+import Dashboard from 'src/pages/Dashboard';
+import Categories from 'src/pages/Categories';
+import Customer from 'src/pages/Customer';
+import CarManager from 'src/pages/CarManager';
+import OrderHistory from 'src/pages/OrderHistory';
+
 
 export const appRoutes = [
     {
-        name: "Main Dashboard",
+        name: "mainDashboard",
         layout: "/app",
         path: "/",
         icon: "src/assets/1.png",
         component: Dashboard
     },
     {
-        name: "Customer",
+        name: "customer",
         layout: "/app",
         path: "/customer",
         icon: "src/assets/2.png",
         component: Customer
     },
     {
-        name: "Categories",
+        name: "categories",
         layout: "/app",
         path: "/categories",
         icon: "src/assets/3.png",
         component: Categories
     },
     {
-        name: "Car Manager",
+        name: "carManager",
         layout: "/app",
         path: "/manager",
         icon: "src/assets/4.png",
         component: CarManager
     },
     {
-        name: "Orders history",
+        name: "ordersHistory",
         layout: "/app",
         path: "/history",
         icon: "src/assets/5.png",
         component: OrderHistory
     },
-]
-
+];

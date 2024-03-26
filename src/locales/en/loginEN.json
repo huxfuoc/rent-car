@@ -1,0 +1,31 @@
+{
+    "login": {
+        "username": "Username",
+        "password": "Password",
+        "login": "Login",
+        "forgotPassword": "Forgot Password?"
+    },
+    "header": {
+        "search": "Search"
+    },
+    "menu": {
+        "mainDashboard": "Main Dashboard",
+        "customer": "Customer",
+        "categories": "Categories",
+        "carManager": "Car Manager",
+        "ordersHistory": "Orders History"
+    },
+    "dashboard": {
+        "todaysStatistics": "Today Statistics",
+        "income": "Income",
+        "expenses": "Expenses",
+        "today": "Today",
+        "compareTo": "Compare to",
+        "yesterday": "Yesterday",
+        "lastWeek": "Last week",
+        "hireVsCancel": "Hire Vs Cancel",
+        "totalHired": "Total Hired",
+        "totalCanceled": "Total Canceled",
+        "totalPending": "Total Pending"
+    }
+}

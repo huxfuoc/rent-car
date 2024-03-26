@@ -1,0 +1,31 @@
+{
+    "login": {
+        "username": "Tài khoản",
+        "password": "Mật khẩu",
+        "login": "Đăng nhập",
+        "forgotPassword": "Quên mật khẩu?"
+    },
+    "header": {
+        "search": "Tìm kiếm"
+    },
+    "menu": {
+        "mainDashboard": "Bảng điều khiển chính",
+        "customer": "Khách hàng",
+        "categories": "Danh mục",
+        "carManager": "Quản lý xe",
+        "ordersHistory": "Lịch sử đơn hàng"
+    },
+    "dashboard": {
+        "todaysStatistics": "Thống kê hôm nay",
+        "income": "Thu nhập",
+        "expenses": "Chi phí",
+        "today": "Hôm nay",
+        "compareTo": "So sánh với",
+        "yesterday": "Ngày hôm qua",
+        "lastWeek": "Tuần trước",
+        "hireVsCancel": "Số lượng thuê/ huỷ",
+        "totalHired": "Người thuê",
+        "totalCanceled": "Huỷ đơn",
+        "totalPending": "Đang chờ"
+    }
+}

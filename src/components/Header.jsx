@@ -1,9 +1,12 @@
 import 'src/css/Header.scss'
+import { useTranslation } from 'react-i18next'
+
 const Header = () => {
+    const { t } = useTranslation("global")
     return (
         <div className='top-header'>
             <div className='search-bar'>
-                <input id='search-input' placeholder='Search'></input>
+                <input id='search-input' placeholder={t("header.search")}></input>
                 <img className='search-icon' src='./src/assets/search-ico.png' alt='tìm kiếm' />
             </div>
             <div className='right-side-header'>
